@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class cajeroautomatico {
+    public static void main(String[] args) {
+
+        Scanner martin= new Scanner(System.in);
+        double saldo=0,retiro,deposito;
+        int opcion;
+        do{
+        System.out.println("1. DEPOSITO\n 2. RETIRO\n 3. CONSULTA\n 4. SALIR \n");
+        System.out.println("ELIJA UNA OPCION .....: ");
+        opcion=martin.nextInt();
+        
+        switch(opcion){
+            case 1: System.out.println("eligio la opcion deposito......");
+                    System.out.println("Escriba la cantidad a depositar: ");
+                     deposito=martin.nextDouble();
+                saldo=deposito+saldo;
+                 System.out.println("Su deposito fue de: "+deposito);
+                break;
+                
+             case 2: System.out.println("eligio la opcion retirar......");
+                    System.out.println("Escriba la cantidad a retirar: ");
+                     retiro=martin.nextDouble();
+                saldo=saldo-retiro;
+                 System.out.println("Su retiro fue de: "+retiro);
+                break;
+                 
+             case 3: System.out.println("eligio la opcion consultar......");
+                    
+                 System.out.println("Su nuevo saldo es de: "+saldo);
+                break;
+                 
+                              
+             case 4: System.out.println("eligio la opcion salir del sistema......");
+                    
+                
+                break;
+             default:System.out.println("la opcion que escribio no existe.....");
+        }
+        }while(opcion!=4);
+         
+    }
+    }
+
