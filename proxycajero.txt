@@ -1,0 +1,117 @@
+using System;
+
+namespace Proxy02
+{
+
+
+public class Tarjeta
+{
+	public interface Ingreso
+	{
+	void peticion (int pOpcion);
+	}
+	
+public class Tarjetadentro:Ingresar
+{
+private Dentro ingresar;
+
+public void Peticion(int pOpcion)
+{
+	
+	if(ingresar==null)
+	{
+	Console.WirteLine("Activando ingreso");
+	ingresar=new Dentro();}
+	
+	if(pOpcion==1)
+	ingresar.IngresoClave();
+	if(pOpcion==2)
+	ingresar.IngresoDni();
+	if(pOpcion==3)
+	ingresar.IngresoPin();
+	}
+}
+}
+
+public class Tarjetadentro:Ingresar
+{
+private Dentro ingresar;
+
+public void Peticion(int pOpcion)
+{
+	int password;
+	int dni;
+	int pin;
+	Console.Writeline("ingresa password");
+	password=Console.ReadLine();
+	dni=Console.ReadLine();
+	clave=Console.ReadLine();
+	
+	if(clave=="1234")
+	{
+		if(ingresar==null)
+		{
+		Console.WriteLine("Correcto, espere un momento");
+		ingresar =new Ingresar();
+		}
+
+	if(pOpcion==1)
+	ingresar.IngresoClave();
+	if(pOpcion==2)
+	ingresar.IngresoDni();
+	if(pOpcion==3)
+	ingresar.IngresoPin();
+	}
+
+	else
+	{
+	Console.WriteLine("Clave no correcta");}
+
+}
+}
+
+private class Dentro
+{
+	public void IngresoClave()
+	{
+	Console.WriteLine("Consultas");
+	Console.WriteLine("Retiro");
+	Console.WriteLine("Transferencia");
+	}
+	public void IngresoDni()
+	{
+	Console.WriteLine("Consultas");
+	Console.WriteLine("Retiro");
+	Console.WriteLine("Transferencia");
+	}
+	public void IngresoPin()
+	{
+	Console.WriteLine("Consultas");
+	Console.WriteLine("Retiro");
+	Console.WriteLine("Transferencia");
+	}
+}
+
+-----PARA LA COMPILACION
+
+class Program
+{
+	static void Main(string[] args)
+	{
+	Tarjeta.ingreso seguridad=new Tarjeta.Tarjetadentro();
+
+	seguridad.Peticion(1);//ya dentro es loq tienes consulta
+	Console.Write("------");
+	seguridad.Peticion(2);
+	Console.Write("------");
+	seguridad.Peticion(3);
+	Console.Write("------");
+	
+	Tarjeta.ingreso seguridadn=new Tarjeta.Tarjetadentro();
+	
+	seguridadn.Peticion(1);
+	Console.WriteLine("------------");
+	seguridadn.Peticion(2);
+	Console.WriteLine("------------");
+	seguridadn.Peticion(3);//si los contra estan puestas bien-
+	

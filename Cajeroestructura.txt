@@ -1,0 +1,86 @@
+CLASES CAJERO INTERFACES
+public interface Cajero(){
+}
+
+public class Ingreso implements Cajero(){
+
+	public tarjeta ingTarjeta(){
+		
+	}
+	public sintarjeta ingsinTarjeta(){
+	}
+}
+
+public class Optarj implements Cajero(){
+	public Clave tenerclave(){
+	}
+	public Dni  tenerdni(){
+	}
+	public Pin tenerpin(){
+	}
+}
+
+public class Opclave implements Cajero(){
+	public Correcto ingcorrecto(){
+	}
+	public Incorrecto ingincorrecto(){
+	}
+	public Intenta ingintenta(){
+	}
+}
+
+public class Opcorrecto implements Cajero(){
+	public Consulta crearconsulta(){
+	}
+	public Retiro crearretiro(){
+	}
+	public Transferencia creartransf(){
+	}
+}
+
+public class Retiro implements Cajero(){
+	public Soles crearsoles(){
+	}
+	public Dolares creardolares(){
+	}
+	public Credito crearcredito(){
+	}
+}
+
+public class Opretiro implements Cajero(){
+	public Montopred tienepred (){
+	}
+	public Montonuevo tienenuevo(){
+	}
+	public Girorap tienegiro(){
+	}
+}
+
+public class Opgiro implements Cajero(){
+	public Rechazo crearrechazo(){
+	}
+	public Acepto crearacepto(){
+	}
+	public Anular crearanular(){
+	}
+}
+
+public class Opacepto implements Cajero(){
+	public Finaliza crearfinaliza(){
+	}
+	public Retroceder crearretroceder(){
+	}
+	public Anula crearanular(){
+	}
+}	 
+Cajero caja;
+tarjeta tarj;
+sintarjeta sintarj;
+
+caja=new Ingreso();
+tarjeta=caja.ingresotarj();
+sintarj=caja.ingresosintarj();
+
+System.out.println(tarj);
+System.out.println(sintarj);
+
