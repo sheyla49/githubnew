@@ -1,0 +1,186 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Task;
+
+CLASES CAJERO AUTOMATICO
+public interface Cajero(){
+}
+
+public class Ingreso implements Cajero(){
+
+	public tarjeta ingTarjeta(){
+	public class Tarjeta
+{
+	public interface Ingreso
+	{
+	void peticion (int pOpcion);
+	}
+	
+public class Tarjetadentro:Ingresar
+{
+private Dentro ingresar;
+
+public void Peticion(int pOpcion)
+{
+	
+	if(ingresar==null)
+	{
+	Console.WirteLine("Activando ingreso");
+	ingresar=new Dentro();}
+	
+	if(pOpcion==1)
+	ingresar.IngresoClave();
+	if(pOpcion==2)
+	ingresar.IngresoDni();
+	if(pOpcion==3)
+	ingresar.IngresoPin();
+	}
+}
+}	
+	}
+
+	public sintarjeta ingsinTarjeta(){
+	}
+}
+
+
+
+public class Optarj implements Cajero(){
+	public Clave tenerclave(){
+	public class Tarjetadentro:Ingresar
+{
+private Dentro ingresar;
+
+public void Peticion(int pOpcion)
+{
+	int password;
+	int dni;
+	int pin;
+	Console.Writeline("ingresa password");
+	password=Console.ReadLine();
+	dni=Console.ReadLine();
+	clave=Console.ReadLine();
+	
+	if(clave=="1234")
+	{
+		if(ingresar==null)
+		{
+		Console.WriteLine("Correcto, espere un momento");
+		ingresar =new Ingresar();
+		}
+
+	if(pOpcion==1)
+	ingresar.IngresoClave();
+	if(pOpcion==2)
+	ingresar.IngresoDni();
+	if(pOpcion==3)
+	ingresar.IngresoPin();
+	}
+
+	else
+	{
+	Console.WriteLine("Clave no correcta");}
+
+}
+}
+	}
+	public Dni  tenerdni(){
+	}
+	public Pin tenerpin(){
+	}
+}
+
+
+
+public class Opclave implements Cajero(){
+	public Correcto ingcorrecto(){
+	}
+	public Incorrecto ingincorrecto(){
+	}
+	public Intenta ingintenta(){
+	}
+}
+
+public class Opcorrecto implements Cajero(){
+	public Consulta crearconsulta(){
+	}
+	public Retiro crearretiro(){
+	}
+	public Transferencia creartransf(){
+	}
+}
+
+public class Retiro implements Cajero(){
+	public Soles crearsoles(){
+	}
+	public Dolares creardolares(){
+	}
+	public Credito crearcredito(){
+	}
+}
+
+public class Opretiro implements Cajero(){
+	public Montopred tienepred (){
+	}
+	public Montonuevo tienenuevo(){
+	}
+	public Girorap tienegiro(){
+	}
+}
+
+public class Opgiro implements Cajero(){
+	public Rechazo crearrechazo(){
+	}
+	public Acepto crearacepto(){
+	}
+	public Anular crearanular(){
+	}
+}
+
+public class Opacepto implements Cajero(){
+	public Finaliza crearfinaliza(){
+	}
+	public Retroceder crearretroceder(){
+	}
+	public Anula crearanular(){
+	}
+}
+
+
+COMPILACION ESTRUCTURA	 
+Cajero caja;
+tarjeta tarj;
+sintarjeta sintarj;
+
+caja=new Ingreso();
+tarjeta=caja.ingresotarj();
+sintarj=caja.ingresosintarj();
+
+System.out.println(tarj);
+System.out.println(sintarj);
+
+-----PARA LA COMPILACION PROXY
+
+class Program
+{
+	static void Main(string[] args)
+	{
+	Tarjeta.ingreso seguridad=new Tarjeta.Tarjetadentro();
+
+	seguridad.Peticion(1);//ya dentro es loq tienes consulta
+	Console.Write("------");
+	seguridad.Peticion(2);
+	Console.Write("------");
+	seguridad.Peticion(3);
+	Console.Write("------");
+	
+	Tarjeta.ingreso seguridadn=new Tarjeta.Tarjetadentro();
+	
+	seguridadn.Peticion(1);
+	Console.WriteLine("------------");
+	seguridadn.Peticion(2);
+	Console.WriteLine("------------");
+	seguridadn.Peticion(3);//si los contra estan puestas bien-
+	
