@@ -1,0 +1,120 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Task;
+
+namespace Composite
+{
+	abstract class Composite
+	{
+	public string AccesoC{get;set;}//acceso correcto
+	public string AccesoOp{get;set;}//acceso operacion
+	public int Fin {get;set;}//finalizar
+	}
+	public Component(string AccesoC, string AccesoOp, int Fin)//constructor
+	{
+	this.AccesoC=Acorrecto;
+	this.AccesoOp=Aopcion;
+	this.Fin=finalizar;
+	}
+}
+ CLASS DE COMPONENT
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Task;
+
+namespace Composite
+{
+	public string consultas{get; set; }
+	public int retiro {get; set; }
+	public int transferencia {get; set; }	
+	public int monto{get; set; }	
+	
+	class Operaciones:Component
+	{	
+	public Operaciones(string AccesoC, string AccesoOp, int Fin) : base(AccesoC, AccesoOp, Fin) //constructor
+	{
+	}
+}
+
+CLASS ABSTRACT DE COMPONENT
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Task;
+
+namespace Composite
+{
+	class RetiroComposite:Component
+	{
+	private List<Component>  operaciones =new Lis<Component>(); //no se pueda agregar nada
+
+	public string Fintotal // recorrdio uno despues de otro
+	{
+		get
+		{
+			string fin=0;//variable
+			foreach(var oElemento in operaciones)
+			{
+			if(oElemento.GetType().Name=="Retiro veces") //si tenemos consulta 2 veves
+				fin+=((RetiroComposite)oElemento).Fintotal;//sumar los operaciones hijos que tenga
+			else
+				fin+= oElemento.costo;
+			}
+			return costo;//va a ir por la propiedad de los hijos de los hijos
+		}
+	}
+	public	void Add(Component oElemento)//son operaciones, agregar otras operaciones
+	{
+		operaciones.Add(oElemento);
+	}
+	public void Remove()//si quiero eliminar operaciones
+	{
+	operaciones.Remove(oElemento);
+	}
+	public RetiroComposite(string AccesoC, string AccesoOp, int Fin=0) : base(AccesoC, AccesoOp, Fin) //constructor
+	{
+	}
+
+}
+
+PARA COMPILAR
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Task;
+
+namespace Composite
+{
+	class Program
+	{
+		static void Main(string[] args)//vamos agregar operaciones
+		{
+		Operaciones oOperacion1= new Operaciones("Tarjeta","Ahorro soles",100);
+		Operaciones oOperacion2= new Operaciones("Dni","Giro",20);
+		Operaciones oOperacion3= new Operaciones("Pin","Ahorro dolares",300);
+
+		RetiroComposite oRetiro= new RetiroComposite("Retiro dinero");
+		oRetiro.Add(oRetiro1);
+		oRetiro.Add(oRetiro2);
+		oRetiro.Add(oRetiro3);
+
+		Console.WriteLine(oRetiro.Fin);//saber cuanto saco el resultado del retiro
+		
+		Operacion oOperacion4=new Operacion("Consulta","Ahorro soles",1500);
+		RetiroComposite oRetiroveces=new RetiroComposite("Retiro doble");//juntamos dos operaciones
+
+		oRetiroveces.Add(oOperacion4);
+		oRetiroveces.Add(Oretiro);
+
+		Console.WriteLine(oRetiroveces.Fin);
+		}
+	}
+}
