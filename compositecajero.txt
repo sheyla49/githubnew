@@ -14,9 +14,9 @@ namespace Composite
 	}
 	public Component(string AccesoC, string AccesoOp, int Fin)//constructor
 	{
-	this.AccesoC=Acorrecto;
-	this.AccesoOp=Aopcion;
-	this.Fin=finalizar;
+	this.AccesoC=AccesoC;
+	this.AccesoOp=AccesoOp;
+	this.Fin=Fin;
 	}
 }
  CLASS DE COMPONENT
